@@ -1,0 +1,72 @@
+1:"$Sreact.fragment"
+8:I[68027,["/_next/static/chunks/01dalzr__b4a1.js","/_next/static/chunks/0vh~4k6htx7rb.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0x_1s~tlsf1r..js"],"default",1]
+:HL["/_next/static/chunks/0zq--~fce49ly.css","style"]
+:HL["https://jialeliu.com/fonts/georgiab.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:T590,
+    try {
+      const cfg = {"enabled":true,"locales":["zh","en"],"defaultLocale":"en","mode":"auto","fixedLocale":"en","persist":true,"switcher":true,"labels":{"zh":"中文","en":"English"}};
+      const storageKey = 'locale-storage';
+      const normalize = (value) => typeof value === 'string' ? value.trim().replace('_', '-').toLowerCase() : '';
+      const matchLocale = (candidate) => {
+        const normalized = normalize(candidate);
+        if (!normalized) return null;
+        if (cfg.locales.includes(normalized)) return normalized;
+        const language = normalized.split('-')[0];
+        if (cfg.locales.includes(language)) return language;
+        return null;
+      };
+
+      let resolved = null;
+
+      if (cfg.persist) {
+        resolved = matchLocale(localStorage.getItem(storageKey));
+      }
+
+      if (!resolved) {
+        if (cfg.mode === 'fixed') {
+          resolved = cfg.fixedLocale;
+        } else {
+          resolved = matchLocale(navigator.language);
+        }
+      }
+
+      if (!resolved) {
+        resolved = cfg.defaultLocale;
+      }
+
+      const root = document.documentElement;
+      root.lang = resolved;
+      root.setAttribute('data-locale', resolved);
+
+      if (cfg.persist) {
+        localStorage.setItem(storageKey, resolved);
+      }
+    } catch (e) {
+      const root = document.documentElement;
+      root.lang = 'en';
+      root.setAttribute('data-locale', 'en');
+    }
+  0:{"P":null,"c":["","awards",""],"q":"","i":false,"f":[[["",{"children":[["slug","awards","d",null],{"children":["__PAGE__",{}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0zq--~fce49ly.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/01dalzr__b4a1.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0vh~4k6htx7rb.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/0d3shmwh5_nmn.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/_next/static/chunks/0x_1s~tlsf1r..js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"scroll-smooth","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"dns-prefetch","href":"https://jialeliu.com"}],["$","link",null,{"rel":"preconnect","href":"https://jialeliu.com","crossOrigin":""}],["$","link",null,{"rel":"preload","as":"font","type":"font/woff2","href":"https://jialeliu.com/fonts/georgiab.woff2","crossOrigin":""}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              try {\n                const theme = localStorage.getItem('theme-storage');\n                const parsed = theme ? JSON.parse(theme) : null;\n                const setting = parsed?.state?.theme || 'system';\n                const prefersDark = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;\n                const effective = setting === 'dark' ? 'dark' : (setting === 'light' ? 'light' : (prefersDark ? 'dark' : 'light'));\n                var root = document.documentElement;\n                root.classList.add(effective);\n                root.setAttribute('data-theme', effective);\n              } catch (e) {\n                var root = document.documentElement;\n                root.classList.add('light');\n                root.setAttribute('data-theme', 'light');\n              }\n            "}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]]}],["$","body",null,{"className":"font-sans antialiased","children":"$L3"}]]}]]}],{"children":["$L4",{"children":["$L5",{},null,false,null]},null,false,"$@6"]},null,false,null],"$L7",false]],"m":"$undefined","G":["$8",["$L9"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"uRYJ7LV2LVocDW3K30ce8"}
+a:I[94519,["/_next/static/chunks/01dalzr__b4a1.js","/_next/static/chunks/0vh~4k6htx7rb.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0x_1s~tlsf1r..js"],"ThemeProvider"]
+b:I[71889,["/_next/static/chunks/01dalzr__b4a1.js","/_next/static/chunks/0vh~4k6htx7rb.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0x_1s~tlsf1r..js"],"LocaleProvider"]
+c:I[28127,["/_next/static/chunks/01dalzr__b4a1.js","/_next/static/chunks/0vh~4k6htx7rb.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0x_1s~tlsf1r..js"],"default"]
+d:I[39756,["/_next/static/chunks/01dalzr__b4a1.js","/_next/static/chunks/0vh~4k6htx7rb.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0x_1s~tlsf1r..js"],"default"]
+e:I[37457,["/_next/static/chunks/01dalzr__b4a1.js","/_next/static/chunks/0vh~4k6htx7rb.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0x_1s~tlsf1r..js"],"default"]
+f:I[58234,["/_next/static/chunks/01dalzr__b4a1.js","/_next/static/chunks/0vh~4k6htx7rb.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0x_1s~tlsf1r..js"],"default"]
+11:I[97367,["/_next/static/chunks/01dalzr__b4a1.js","/_next/static/chunks/0vh~4k6htx7rb.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0x_1s~tlsf1r..js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/01dalzr__b4a1.js","/_next/static/chunks/0vh~4k6htx7rb.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0x_1s~tlsf1r..js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/01dalzr__b4a1.js","/_next/static/chunks/0vh~4k6htx7rb.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0x_1s~tlsf1r..js"],"MetadataBoundary"]
+3:["$","$La",null,{"children":["$","$Lb",null,{"config":{"enabled":true,"locales":["zh","en"],"defaultLocale":"en","mode":"auto","fixedLocale":"en","persist":true,"switcher":true,"labels":{"zh":"中文","en":"English"}},"children":[["$","$Lc",null,{"items":[{"title":"About","type":"page","target":"about","href":"/"},{"title":"Publications","type":"page","target":"publications","href":"/publications"},{"title":"Awards","type":"page","target":"awards","href":"/awards"},{"title":"Services","type":"page","target":"services","href":"/services"},{"title":"CV","type":"page","target":"cv","href":"/cv"}],"siteTitle":"Jiahao Wang","enableOnePageMode":false,"i18n":"$3:props:children:props:config","itemsByLocale":{"zh":[{"title":"关于我","type":"page","target":"about","href":"/"},{"title":"论文","type":"page","target":"publications","href":"/publications"},{"title":"奖项","type":"page","target":"awards","href":"/awards"},{"title":"服务","type":"page","target":"services","href":"/services"},{"title":"简历","type":"page","target":"cv","href":"/cv"}],"en":[{"title":"About","type":"page","target":"about","href":"/"},{"title":"Publications","type":"page","target":"publications","href":"/publications"},{"title":"Awards","type":"page","target":"awards","href":"/awards"},{"title":"Services","type":"page","target":"services","href":"/services"},{"title":"CV","type":"page","target":"cv","href":"/cv"}]},"siteTitleByLocale":{"zh":"王家豪","en":"Jiahao Wang"}}],["$","main",null,{"className":"min-h-screen pt-16 lg:pt-20","children":["$","$Ld",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Le",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$Lf",null,{"lastUpdated":"March 19, 2026","lastUpdatedByLocale":{"zh":"2026年3月19日","en":"March 19, 2026"},"defaultLocale":"en"}]]}]}]
+4:["$","$1","c",{"children":[null,["$","$Ld",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Le",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+5:["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/0q9~97_whgwkq.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0j8fs44xhqvdv.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}]
+14:[]
+6:"$W14"
+7:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$12",null,{"name":"Next.Metadata","children":"$L18"}]}]}],null]}]
+9:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0zq--~fce49ly.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[21062,["/_next/static/chunks/01dalzr__b4a1.js","/_next/static/chunks/0vh~4k6htx7rb.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0x_1s~tlsf1r..js","/_next/static/chunks/0q9~97_whgwkq.js","/_next/static/chunks/0j8fs44xhqvdv.js"],"default"]
+10:["$","$L19",null,{"dataByLocale":{"zh":{"type":"card","config":{"type":"card","title":"奖项","description":"我获得的荣誉与奖项。","items":[{"title":"数字中国创新大赛","subtitle":"第六名，国家级","date":"2025","content":"数字安全赛道"},{"title":"CCL25-Eval任务10","subtitle":"第二名（2/659）","date":"2025","content":"细粒度中文仇恨言论识别"},{"title":"全国大学生信息安全竞赛","subtitle":"三等奖，国家级","date":"2025","content":"第十八届全国竞赛"},{"title":"全国大学生数学竞赛","subtitle":"一等奖，省级","date":"2023","content":"第十五届全国竞赛"},{"title":"哈尔滨工业大学（深圳）","subtitle":"三等奖学金","date":"2022-2023","content":"学业优秀奖"}]}},"en":{"type":"card","config":{"type":"card","title":"Awards","description":"Honors and awards I have received.","items":[{"title":"Digital China Innovation Contest","subtitle":"Sixth Place, National Level","date":"2025","content":"Digital Security Track"},{"title":"CCL25-Eval Task 10","subtitle":"Second Place (2/659)","date":"2025","content":"Fine-grained Chinese Hate Speech Recognition"},{"title":"National College Student Information Security Competition","subtitle":"Third Prize, National Level","date":"2025","content":"18th National Competition"},{"title":"National College Student Mathematics Competition","subtitle":"First Prize, Provincial Level","date":"2023","content":"15th National Competition"},{"title":"Harbin Institute of Technology, Shenzhen","subtitle":"Third-Class Scholarship","date":"2022-2023","content":"Academic Excellence Award"}]}}},"defaultLocale":"en"}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[27201,["/_next/static/chunks/01dalzr__b4a1.js","/_next/static/chunks/0vh~4k6htx7rb.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0x_1s~tlsf1r..js"],"IconMark"]
+13:null
+18:[["$","title","0",{"children":"Awards | Jiahao Wang"}],["$","meta","1",{"name":"description","content":"Honors and awards I have received."}],["$","meta","2",{"name":"author","content":"Jiahao Wang"}],["$","meta","3",{"name":"keywords","content":"Jiahao Wang,PhD,Research,Harbin Institute of Technology, Shenzhen"}],["$","meta","4",{"name":"creator","content":"Jiahao Wang"}],["$","meta","5",{"name":"publisher","content":"Jiahao Wang"}],["$","meta","6",{"property":"og:title","content":"Jiahao Wang"}],["$","meta","7",{"property":"og:description","content":"Undergraduate student at Harbin Institute of Technology, Shenzhen."}],["$","meta","8",{"property":"og:site_name","content":"Jiahao Wang's Academic Website"}],["$","meta","9",{"property":"og:locale","content":"en_US"}],["$","meta","10",{"property":"og:type","content":"website"}],["$","meta","11",{"name":"twitter:card","content":"summary"}],["$","meta","12",{"name":"twitter:title","content":"Jiahao Wang"}],["$","meta","13",{"name":"twitter:description","content":"Undergraduate student at Harbin Institute of Technology, Shenzhen."}],["$","link","14",{"rel":"icon","href":"/favicon.svg"}],["$","$L1a","15",{}]]
