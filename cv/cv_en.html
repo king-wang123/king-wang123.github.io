@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiahao Wang - Curriculum Vitae</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: rgb(23, 23, 127);
+        }
+        .contact {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            border-bottom: 2px solid blue;
+            padding-bottom: 5px;
+            margin-top: 20px;
+            color: rgb(23, 23, 127);
+        }
+        h3 {
+            font-size: 16px;
+            margin: 10px 0 5px;
+            display: inline;
+        }
+        .duration {
+            font-size: 14px;
+            color: #666;
+            margin-left: 10px;
+            display: inline;
+        }
+        p, ul {
+            margin: 5px 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin: 2px 0;
+        }
+        a {
+            color: black;
+            text-decoration: underline;
+        }
+        a:hover {
+            text-decoration-color: blue;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .item {
+            margin-bottom: 15px;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+        .stars {
+            font-size: 14px;
+            color: white;
+            background-color: #a3afe7;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 10px;
+            display: inline-block;
+            line-height: 1.4;
+        }
+        .authors {
+            font-size: 14px;
+            color: #555;
+            font-style: italic;
+            margin-top: 5px;
+            display: block;
+        }
+        .authors strong {
+            font-weight: bold;
+            font-style: normal;
+        }
+    </style>
+    <script>
+        // 函数：获取 GitHub 仓库的 Star 数量
+        async function fetchStars(owner, repo, elementId) {
+            try {
+                const response = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const data = await response.json();
+                const stars = data.stargazers_count;
+                document.getElementById(elementId).textContent = `⭐ ${stars}`;
+            } catch (error) {
+                console.error('Error fetching stars:', error);
+                document.getElementById(elementId).textContent = '⭐ Unable to fetch';
+            }
+        }
+
+        // 页面加载完成后获取所有项目的 Star 数量
+        window.onload = function() {
+            fetchStars('king-wang123', 'PyTorch-DeepLearning-Practice-Projects', 'stars-pytorch');
+            fetchStars('king-wang123', 'ZHIHUISHU-Auto-Answer-Assistant', 'stars-zhihuishu');
+            fetchStars('king-wang123', 'Douban-MovieReview-Crawler', 'stars-douban');
+        };
+    </script>
+</head>
+<body>
+    <h1>Jiahao Wang</h1>
+    <div class="contact">
+        ✉️ <a href="mailto:wjh123king@gmail.com">wjh123king@gmail.com</a> | 📞 +86 15893794173 | 🎓 <a href="https://github.com/king-wang123" target="_blank">github.com/king-wang123</a>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+        <p><span class="highlight">Harbin Institute of Technology, Shenzhen</span></p>
+        <ul>
+            <li>Bachelor of Engineering in Computer Science and Technology</li>
+            <li>Duration: Sep 2022 - Jun 2026</li>
+            <li>GPA: 87.303/100</li>
+        </ul>
+        <p><span class="highlight">The Hong Kong Polytechnic University</span></p>
+        <ul>
+            <li>Ph.D. in Computer Science</li>
+            <li>Duration: Sep 2026 - Jun 2030 (Expected)</li>
+        </ul>
+    </div>
+
+
+    <div class="section">
+        <h2>Research Experience</h2>
+        <div class="item">
+            <h3>ICML 2026 : Sufficiency-guided Continuous Adaptive Reasoning</h3>
+            <span class="authors"><strong>Jiahao Wang</strong>, Bingyu Liang, Chenhao Hu, Longhui Zhang, Xuebo Liu, Min Zhang, Jing Li, Xuelong Li</span>
+            <ul>
+                <li>Exploring dynamic thinking mechanisms in LLMs to enable the model to autonomously adjust reasoning effort based on problem complexity. (1st Author)</li>
+            </ul>
+        </div>
+        <div class="item">
+            <h3>ICML 2026 : Bridging Functional Correctness and Runtime Efficiency Gaps in LLM-Based Code Translation</h3>
+            <span class="authors">Longhui Zhang, <strong>Jiahao Wang</strong>, Chenhao Hu, Bingyu Liang, Jing Li, Min Zhang</span>
+            <ul>
+                <li>Improving Code Translation Correctness and Efficiency with Multi-Perspective Exploration and Difference-Aware Selection. (2nd Author)</li>
+            </ul>
+        </div>
+        <div class="item">
+            <h3>ACL 2025 : <a href="https://aclanthology.org/2025.acl-long.1387" target="_blank">Progressive Code Acceleration Through Bidirectional Tree Editing</a></h3>
+            <span class="authors">Longhui Zhang, <strong>Jiahao Wang</strong>, Meishan Zhang, GaoXiong Cao, Ensheng Shi, mayuchi, Jun Yu, Honghai LIU, Jing Li, Min Zhang</span>
+            <span class="highlight"></span>
+            <ul>
+                <li>Designed a novel benchmark. Proposed a new code acceleration metric. Proposed the BITE method using bidirectional tree editing and progressive learning to accelerate code. (2nd Author)</li>
+            </ul>
+        </div>
+        <div class="item">
+            <h3>ICML 2025 : <a href="https://icml.cc/virtual/2025/poster/44745" target="_blank">Function-to-Style Guidance of LLMs for Code Translation</a></h3>
+            <span class="authors">Longhui Zhang, Bin Wang, <strong>Jiahao Wang</strong>, Xiaofeng Zhao, Min Zhang, Hao Yang, Meishan Zhang, YU LI, Jing Li, Jun Yu, Min Zhang</span>
+            <ul>
+                <li>Developed F2STrans, a method integrating function and style learning to improve LLM-based code translation. (3rd Author)</li>
+            </ul>
+        </div>
+        <div class="item">
+            <h3>CCL 2025 (Oral): <a href="https://arxiv.org/abs/2507.18580v1" target="_blank">SRAG-MAV for Fine-Grained Chinese Hate Speech Recognition</a></h3>
+            <span class="authors"><strong>Jiahao Wang</strong>, Ramen Liu, Longhui Zhang, Jing Li</span>
+            <ul>
+                <li>System Report for CCL25-Eval Task 10: Proposed a novel SRAG-MAV framework that enhances fine-grained Chinese hate speech recognition. (1st Author)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Internships</h2>
+        <div class="item">
+            <h3>Tencent Youtu Lab</h3>
+            <span class="duration">Research Intern | Mar 2026 - Present</span>
+            <ul>
+                <li>Agent Skill: Improving on-device model performance with Agent Skill.</li>
+                <li>Terminal Agent: Data synthesis and model training for Terminal Agent.</li>
+            </ul>
+        </div>
+        <div class="item">
+            <h3>Verilog Large Language Model Technology Cooperation Project</h3>
+            <span class="duration">Research Intern | Jun 2025 - Feb 2026</span>
+            <ul>
+                <li>Huawei-HIT Joint Project supported by CCF-Huawei Poplar Fund.</li>
+                <li>Participated in developing verilog data governance tools, distilling a Verilog code generation model matching industry-leading performance, and creating supporting IDE plugins.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Open-Source Projects</h2>
+        <div class="item">
+            <h3><a href="https://github.com/king-wang123/PyTorch-DeepLearning-Practice-Projects" target="_blank">PyTorch-DeepLearning-Practice-Projects</a></h3>
+            <span class="duration">Ongoing</span>
+            <span id="stars-pytorch" class="stars">⭐ Loading...</span>
+            <ul>
+                <li>PyTorch-based deep learning projects, with updates (e.g., Diffusion, Gomoku RL).</li>
+            </ul>
+        </div>
+        <div class="item">
+            <h3><a href="https://github.com/king-wang123/ZHIHUISHU-Auto-Answer-Assistant" target="_blank">ZHIHUISHU-Auto-Answer-Assistant</a></h3>
+            <span class="duration">Completed</span>
+            <span id="stars-zhihuishu" class="stars">⭐ Loading...</span>
+            <ul>
+                <li>Automated answering tool for Zhihuishu using web scraping and LLMs.</li>
+            </ul>
+        </div>
+        <div class="item">
+            <h3><a href="https://github.com/king-wang123/Douban-MovieReview-Crawler" target="_blank">Douban-MovieReview-Crawler</a></h3>
+            <span class="duration">Completed</span>
+            <span id="stars-douban" class="stars">⭐ Loading...</span>
+            <ul>
+                <li>Crawler for Douban reviews, generating star ratings and word clouds.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Honors and Awards</h2>
+        <ul>
+            <li>2025: Sixth Place, Digital China Innovation Contest (<b>National Level</b>)</li>
+            <li>2025: Second Place(2/659), <a href="https://tianchi.aliyun.com/competition/entrance/532298/rankingList" target="_blank">CCL25-Eval Task 10</a></li>
+            <li>2025: Third Prize, 18th National College Student Information Security Competition (<b>National Level</b>)</li>
+            <li>2023: First Prize, 15th National College Student Mathematics Competition (<b>Provincial Level</b>)</li>
+            <li>2022-2023: Third-Class Scholarship, Harbin Institute of Technology, Shenzhen</li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

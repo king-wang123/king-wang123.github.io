@@ -1,0 +1,64 @@
+name: Deploy site to GitHub Pages
+
+# This repo (king-wang123/king-wang123.github.io) now holds BOTH the Next.js
+# source code AND the live site. On every push to main we build the static
+# export and publish it to GitHub Pages using the built-in GITHUB_TOKEN.
+# No personal access token (PAT) is required.
+#
+# One-time setup (only needs to be done once):
+#   Settings -> Pages -> Build and deployment -> Source = "GitHub Actions".
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+# Grant the token the permissions required to deploy to GitHub Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Add .nojekyll (allow _next folder on GitHub Pages)
+        run: touch out/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

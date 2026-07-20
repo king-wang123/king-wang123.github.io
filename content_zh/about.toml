@@ -1,0 +1,23 @@
+type = "about"
+title = "关于我"
+
+[profile]
+research_interests = [
+  "大语言模型 (LLMs)",
+  "可验证奖励的强化学习 (RLVR)",
+  "代码智能",
+  "推理优化"
+]
+
+[[sections]]
+id = "about"
+type = "markdown"
+source = "bio.md"
+title = "关于我"
+
+[[sections]]
+id = "featured_publications"
+type = "publications"
+title = "精选论文"
+filter = "selected"
+limit = 5

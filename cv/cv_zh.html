@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resume-Jiahao Wang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #2c3e50;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin: 10px 0 5px;
+            display: inline;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        a {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            text-decoration-color: blue;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section ul {
+            padding-left: 20px;
+        }
+
+        .section ul li {
+            margin-bottom: 5px;
+        }
+
+        .basic-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .basic-info .left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .basic-info .left .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .basic-info .left .row p {
+            flex: 1;
+            margin: 0;
+        }
+
+        .basic-info .right {
+            flex: 0 0 150px;
+            text-align: right;
+        }
+
+        .basic-info .right img {
+            width: 120px;
+            height: auto;
+            border: 2px solid #2c3e50;
+        }
+
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .duration {
+            font-size: 14px;
+            color: #666;
+            margin-left: 10px;
+            display: inline;
+        }
+    </style>
+    <script>
+        // 函数：获取 GitHub 仓库的 Star 数量
+        async function fetchStars(owner, repo, elementId) {
+            try {
+                const response = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const data = await response.json();
+                const stars = data.stargazers_count;
+                document.getElementById(elementId).textContent = `⭐ ${stars}`;
+            } catch (error) {
+                console.error('Error fetching stars:', error);
+                document.getElementById(elementId).textContent = '⭐ Unable to fetch';
+            }
+        }
+
+        // 页面加载完成后获取所有项目的 Star 数量
+        window.onload = function () {
+            fetchStars('king-wang123', 'PyTorch-DeepLearning-Practice-Projects', 'stars-pytorch');
+            fetchStars('king-wang123', 'ZHIHUISHU-Auto-Answer-Assistant', 'stars-zhihuishu');
+            fetchStars('king-wang123', 'Douban-MovieReview-Crawler', 'stars-douban');
+        };
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="basic-info">
+                <div class="left">
+                    <h2>基本信息</h2>
+                    <div class="row">
+                        <p>姓名: 王家豪</p>
+                        <p>性别: 男</p>
+                    </div>
+                    <div class="row">
+                        <p>年级🎓: 博一 待入学</p>
+                        <p>电话📱: +86 15893794173 （微信同号）</p>
+                    </div>
+                    <div class="row">
+                        <p>邮箱✉️: <a href="mailto:wjh123king@gmail.com">wjh123king@gmail.com</a></p>
+                        <p>GitHub: <a href="https://github.com/king-wang123">https://github.com/king-wang123</a></p>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="image.png" alt="王家豪">
+                </div>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2>教育背景</h2>
+            <p><strong>哈尔滨工业大学（深圳）</strong></p>
+            <ul>
+                <li>本科</li>
+                <li>计算机科学与技术专业</li>
+                <li>时间: 2022年9月 - 2026年6月</li>
+                <li>平均学分绩: 87.303 / 100</li>
+            </ul>
+            <p><strong>香港理工大学</strong> </p>
+            <ul>
+                <li>直博</li>
+                <li>时间: 2026年9月 - 2030年6月（预计）</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>研究经历</h2>
+            <div class="item">
+                <h3>Sufficiency-guided Continuous Adaptive Reasoning</h3>
+                <ul>
+                    <li><strong>会议：ICML 2026</strong>（<span class="highlight">CCFA类会议</span>，一作）</li>
+                    <li><strong>研究方向：</strong>推理优化</li>
+                    <li><strong>论文内容：</strong>探索大模型动态思考机制，提出基于推理充分性的两阶段训练框架，让模型自适应思考。</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>Bridging Functional Correctness and Runtime Efficiency Gaps in Code
+                    Translation</h3>
+                <ul>
+                    <li><strong>会议：ICML 2026</strong>（<span class="highlight">CCFA类会议</span>，二作）</li>
+                    <li><strong>研究方向：</strong>代码翻译</li>
+                    <li><strong>论文内容：</strong>通过多视角探索和差异感知选择，提升代码翻译的正确性和效率。</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3><a href="https://aclanthology.org/2025.acl-long.1387" target="_blank">Progressive Code
+                        Acceleration Through Bidirectional Tree Editing</a></h3>
+                <ul>
+                    <li><strong>会议：ACL 2025</strong>（<span class="highlight">CCFA类会议</span>，二作）</li>
+                    <li><strong>研究方向：</strong>代码优化</li>
+                    <li><strong>论文内容：</strong>提出双向树编辑和渐进代码加速的训练范式，设计新的代码加速 benchmark。</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3><a href="https://icml.cc/virtual/2025/poster/44745" target="_blank">Function-to-Style
+                        Guidance of LLMs for Code Translation</a></h3>
+                <ul>
+                    <li><strong>会议：ICML 2025</strong>（<span class="highlight">CCFA类会议</span>，三作）</li>
+                    <li><strong>研究方向：</strong>代码翻译</li>
+                    <li><strong>论文内容：</strong>整合功能和风格双阶段学习以提升基于大语言模型的代码翻译能力。</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3><a href="https://arxiv.org/abs/2507.18580v1" target="_blank">SRAG-MAV for
+                        Fine-Grained Chinese Hate Speech Recognition</a></h3>
+                <ul>
+                    <li><strong>会议：CCL 2025</strong> （<span class="highlight"></span>Oral，一作</span>）</li>
+                    <li><strong>研究方向：</strong>仇恨言论识别</li>
+                    <li><strong>论文内容：</strong>提出新颖的 SRAG-MAV 框架，通过自检索和模型并行投票增强大模型四元组提取能力。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>实习经历</h2>
+            <div class="item">
+                <h3>腾讯优图实验室</h3>
+                <span class="duration">研究实习生 | 2026年3月 - 至今</span>
+                <ul>
+                    <li>Agent Skill：Agent Skill 提升端侧模型性能。</li>
+                    <li>Terminal Agent：Terminal Agent 数据合成与模型训练。</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>华为-哈工大联合项目（CCF-华为胡杨林基金支持）</h3>
+                <span class="duration">学校项目 | 2025年6月 - 2026年2月</span>
+                <ul>
+                    <li>参与开发 Verilog 数据治理工具，蒸馏达到业界领先性能的 Verilog 代码生成模型，并开发配套 IDE 插件。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>开源项目</h2>
+            <div class="item">
+                <h3><a href="https://github.com/king-wang123/PyTorch-DeepLearning-Practice-Projects"
+                        target="_blank">PyTorch-DeepLearning-Practice-Projects</a></h3>
+                <span id="stars-pytorch" class="stars">⭐ Loading...</span>
+                <ul>
+                    <li>基于PyTorch的深度学习项目，持续更新（例如，扩散模型、五子棋强化学习）。</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3><a href="https://github.com/king-wang123/ZHIHUISHU-Auto-Answer-Assistant"
+                        target="_blank">ZHIHUISHU-Auto-Answer-Assistant</a></h3>
+                <span id="stars-zhihuishu" class="stars">⭐ Loading...</span>
+                <ul>
+                    <li>使用网页自动化工具和大语言模型开发的智慧树自动答题 agent。</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3><a href="https://github.com/king-wang123/Douban-MovieReview-Crawler"
+                        target="_blank">Douban-MovieReview-Crawler</a></h3>
+                <span id="stars-douban" class="stars">⭐ Loading...</span>
+                <ul>
+                    <li>豆瓣评论爬虫，生成星级评分和词云。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>荣誉与奖项</h2>
+            <ul>
+                <li>2025年：数字中国创新大赛数字安全赛道第六名（<b>国家级</b>）</li>
+                <li>2025年：<a href="https://tianchi.aliyun.com/competition/entrance/532298/rankingList"
+                        target="_blank">CCL25-Eval任务10</a>第二名（2/682）</li>
+                <li>2025年：第十八届全国大学生信息安全竞赛三等奖（<b>国家级</b>）</li>
+                <li>2023年：第十五届全国大学生数学竞赛一等奖（<b>省级</b>）</li>
+                <li>2022-2023年：哈尔滨工业大学（深圳）三等奖学金</li>
+            </ul>
+        </div>
+</body>
+
+</html>

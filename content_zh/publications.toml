@@ -1,0 +1,42 @@
+type = "publication"
+title = "论文"
+description = "我的研究工作合集。"
+source = "publications.bib"
+
+[[publications]]
+title = "Sufficiency-guided Continuous Adaptive Reasoning"
+authors = ["Jiahao Wang", "Bingyu Liang", "Chenhao Hu", "Longhui Zhang", "Xuebo Liu", "Min Zhang", "Jing Li", "Xuelong Li"]
+venue = "ICML 2026"
+year = "2026"
+selected = true
+
+[[publications]]
+title = "Bridging Functional Correctness and Runtime Efficiency Gaps in LLM-Based Code Translation"
+authors = ["Longhui Zhang", "Jiahao Wang", "Chenhao Hu", "Bingyu Liang", "Jing Li", "Min Zhang"]
+venue = "ICML 2026"
+year = "2026"
+selected = true
+
+[[publications]]
+title = "Progressive Code Acceleration Through Bidirectional Tree Editing"
+authors = ["Longhui Zhang", "Jiahao Wang", "Meishan Zhang", "GaoXiong Cao", "Ensheng Shi", "mayuchi", "Jun Yu", "Honghai LIU", "Jing Li", "Min Zhang"]
+venue = "ACL 2025"
+year = "2025"
+url = "https://aclanthology.org/2025.acl-long.1387"
+selected = true
+
+[[publications]]
+title = "Function-to-Style Guidance of LLMs for Code Translation"
+authors = ["Longhui Zhang", "Bin Wang", "Jiahao Wang", "Xiaofeng Zhao", "Min Zhang", "Hao Yang", "Meishan Zhang", "YU LI", "Jing Li", "Jun Yu", "Min Zhang"]
+venue = "ICML 2025"
+year = "2025"
+url = "https://icml.cc/virtual/2025/poster/44745"
+selected = true
+
+[[publications]]
+title = "SRAG-MAV for Fine-Grained Chinese Hate Speech Recognition"
+authors = ["Jiahao Wang", "Ramen Liu", "Longhui Zhang", "Jing Li"]
+venue = "CCL 2025 (Oral)"
+year = "2025"
+url = "https://arxiv.org/abs/2507.18580v1"
+selected = true

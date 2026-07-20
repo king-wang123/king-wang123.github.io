@@ -1,0 +1,23 @@
+type = "about"
+title = "About"
+
+[profile]
+research_interests = [
+  "Large Language Models (LLMs)",
+  "Reinforcement Learning with Verifiable Rewards (RLVR)",
+  "Code Intelligence",
+  "Reasoning Optimization"
+]
+
+[[sections]]
+id = "about"
+type = "markdown"
+source = "bio.md"
+title = "About"
+
+[[sections]]
+id = "featured_publications"
+type = "publications"
+title = "Selected Publications"
+filter = "selected"
+limit = 5

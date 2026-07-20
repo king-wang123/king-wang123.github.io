@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /d/datum/personal_info/Homepage/public/cv)",
+      "Bash(cp /d/datum/personal_info/Homepage/cv/*.pdf /d/datum/personal_info/Homepage/public/cv/)"
+    ]
+  }
+}

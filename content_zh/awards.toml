@@ -1,0 +1,33 @@
+type = "card"
+title = "奖项"
+description = "我获得的荣誉与奖项。"
+
+[[items]]
+title = "数字中国创新大赛"
+subtitle = "第六名，国家级"
+date = "2025"
+content = "数字安全赛道"
+
+[[items]]
+title = "CCL25-Eval任务10"
+subtitle = "第二名（2/659）"
+date = "2025"
+content = "细粒度中文仇恨言论识别"
+
+[[items]]
+title = "全国大学生信息安全竞赛"
+subtitle = "三等奖，国家级"
+date = "2025"
+content = "第十八届全国竞赛"
+
+[[items]]
+title = "全国大学生数学竞赛"
+subtitle = "一等奖，省级"
+date = "2023"
+content = "第十五届全国竞赛"
+
+[[items]]
+title = "哈尔滨工业大学（深圳）"
+subtitle = "三等奖学金"
+date = "2022-2023"
+content = "学业优秀奖"

@@ -1,0 +1,56 @@
+[site]
+title = "王家豪"
+description = "哈尔滨工业大学（深圳）本科生个人主页。"
+last_updated = "2026年7月20日"
+
+[author]
+name = "王家豪"
+title = "本科生"
+institution = "哈尔滨工业大学（深圳）"
+
+[social]
+email = "wjh123king@gmail.com"
+google_scholar = "https://scholar.google.com"
+github = "https://github.com/king-wang123"
+cv = "/cv/cv_zh.pdf"
+
+[features]
+enable_likes = true
+enable_one_page_mode = false
+
+[i18n]
+enabled = true
+locales = ["zh", "en"]
+default_locale = "zh"
+mode = "auto"
+fixed_locale = "zh"
+persist = true
+switcher = true
+
+[i18n.labels]
+zh = "中文"
+en = "English"
+
+[[navigation]]
+title = "关于我"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "论文"
+type = "page"
+target = "publications"
+href = "/publications"
+
+[[navigation]]
+title = "奖项"
+type = "page"
+target = "awards"
+href = "/awards"
+
+[[navigation]]
+title = "简历"
+type = "page"
+target = "cv"
+href = "/cv"

@@ -1,0 +1,33 @@
+type = "card"
+title = "Awards"
+description = "Honors and awards I have received."
+
+[[items]]
+title = "Digital China Innovation Contest"
+subtitle = "Sixth Place, National Level"
+date = "2025"
+content = "Digital Security Track"
+
+[[items]]
+title = "CCL25-Eval Task 10"
+subtitle = "Second Place (2/659)"
+date = "2025"
+content = "Fine-grained Chinese Hate Speech Recognition"
+
+[[items]]
+title = "National College Student Information Security Competition"
+subtitle = "Third Prize, National Level"
+date = "2025"
+content = "18th National Competition"
+
+[[items]]
+title = "National College Student Mathematics Competition"
+subtitle = "First Prize, Provincial Level"
+date = "2023"
+content = "15th National Competition"
+
+[[items]]
+title = "Harbin Institute of Technology, Shenzhen"
+subtitle = "Third-Class Scholarship"
+date = "2022-2023"
+content = "Academic Excellence Award"
