@@ -1,0 +1,13 @@
+type = "card"
+title = "实习经历"
+description = "我的实习经历。我认为动手的科研与业界实习经验，和论文发表同等重要。"
+
+[[items]]
+title = "腾讯优图实验室"
+subtitle = "研究实习生"
+date = "2026年3月 - 至今"
+content = """
+- **Agent Skill**：通过 Agent Skill 提升端侧模型性能。
+- **Terminal Agent**：Terminal Agent 数据合成与模型训练。
+"""
+tags = ["大模型 Agent", "端侧模型", "Agent Skill", "Terminal Agent", "数据合成"]

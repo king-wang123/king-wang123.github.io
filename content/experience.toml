@@ -1,0 +1,13 @@
+type = "card"
+title = "Experience"
+description = "My internship experiences. I consider hands-on research and industry experience just as important as publications."
+
+[[items]]
+title = "Tencent Youtu Lab"
+subtitle = "Research Intern"
+date = "Mar 2026 – Present"
+content = """
+- **Agent Skill**: Improving on-device model performance with Agent Skill.
+- **Terminal Agent**: Data synthesis and model training for Terminal Agent.
+"""
+tags = ["LLM Agent", "On-device Models", "Agent Skill", "Terminal Agent", "Data Synthesis"]
