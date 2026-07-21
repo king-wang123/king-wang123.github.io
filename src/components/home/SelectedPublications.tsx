@@ -5,6 +5,14 @@ import Link from 'next/link';
 import { Publication } from '@/types/publication';
 import { useMessages } from '@/lib/i18n/useMessages';
 
+// CCF rank badge styles: solid, high-contrast colors so top-tier venues stand out
+// (distinct from the accent color used by name/links). A = red, B = orange, C = blue.
+const CCF_BADGE_CLASS: Record<string, string> = {
+    A: 'bg-gradient-to-r from-rose-500 to-red-600 text-white border-transparent shadow-sm',
+    B: 'bg-gradient-to-r from-amber-400 to-orange-500 text-white border-transparent shadow-sm',
+    C: 'bg-gradient-to-r from-sky-400 to-blue-500 text-white border-transparent shadow-sm',
+};
+
 interface SelectedPublicationsProps {
     publications: Publication[];
     title?: string;
@@ -61,7 +69,7 @@ export default function SelectedPublications({ publications, title, enableOnePag
                                 {pub.journal || pub.conference} {pub.year}
                             </p>
                             {pub.ccf && (
-                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/20">
+                                <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold tracking-wide border ${CCF_BADGE_CLASS[pub.ccf] || 'bg-accent/10 text-accent border-accent/20'}`}>
                                     CCF {pub.ccf}
                                 </span>
                             )}
