@@ -1,6 +1,6 @@
 type = "card"
 title = "Experience"
-description = "My internship experiences. I consider hands-on research and industry experience just as important as publications."
+description = "My internship experiences."
 
 [[items]]
 title = "Tencent Youtu Lab"

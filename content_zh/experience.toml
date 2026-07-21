@@ -1,6 +1,6 @@
 type = "card"
 title = "实习经历"
-description = "我的实习经历。我认为动手的科研与业界实习经验，和论文发表同等重要。"
+description = "我的实习经历。"
 
 [[items]]
 title = "腾讯优图实验室"
