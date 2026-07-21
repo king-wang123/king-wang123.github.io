@@ -2,4 +2,4 @@ I am a final-year undergraduate student at the School of Computer Science, Harbi
 
 I am currently a research intern at Tencent Youtu Lab. My research interests lie in Natural Language Processing, particularly Large Language Models, Reinforcement Learning with Verifiable Rewards (RLVR), Code Intelligence, and Reasoning Optimization.
 
-I have published papers at top-tier venues including ICML, ACL, and CCL.
+I have published papers at top-tier venues including ICML and ACL.
