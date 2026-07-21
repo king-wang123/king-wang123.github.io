@@ -35,6 +35,22 @@ const monthMapping: Record<string, number> = {
   dec: 12, december: 12,
 };
 
+// Map long, official venue names (as written in the authoritative BibTeX booktitle/
+// journal) to short display names. This only affects what is shown on the page; the
+// stored BibTeX stays full and unchanged. The year is appended separately by the UI,
+// so values here are the bare acronym (e.g. "ICML" -> shown as "ICML 2026").
+// Add an entry only when a new venue actually appears; no need to pre-list others.
+const VENUE_SHORT: Record<string, string> = {
+  'Forty-second International Conference on Machine Learning': 'ICML',
+  'Forty-third International Conference on Machine Learning': 'ICML',
+  'Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)': 'ACL',
+  'The 24th China National Conference on Computational Linguistics (Evaluation Workshop)': 'CCL',
+};
+
+function shortenVenue(full: string): string {
+  return VENUE_SHORT[full.trim()] || full;
+}
+
 export function parseBibTeX(bibtexContent: string, locale?: string): Publication[] {
   const highlightNames = getHighlightNames(locale);
   const entries = bibtexParse.toJSON(bibtexContent);
@@ -79,9 +95,9 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
       keywords,
       researchArea: detectResearchArea(tags.title, keywords),
 
-      // Optional fields
-      journal: cleanBibTeXString(tags.journal),
-      conference: cleanBibTeXString(tags.booktitle),
+      // Optional fields (venues shown with short names; BibTeX stays full/authoritative)
+      journal: shortenVenue(cleanBibTeXString(tags.journal)),
+      conference: shortenVenue(cleanBibTeXString(tags.booktitle)),
       volume: tags.volume,
       issue: tags.number,
       pages: tags.pages,
