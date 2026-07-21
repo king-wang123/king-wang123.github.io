@@ -35,20 +35,24 @@ const monthMapping: Record<string, number> = {
   dec: 12, december: 12,
 };
 
-// Map long, official venue names (as written in the authoritative BibTeX booktitle/
-// journal) to short display names. This only affects what is shown on the page; the
-// stored BibTeX stays full and unchanged. The year is appended separately by the UI,
-// so values here are the bare acronym (e.g. "ICML" -> shown as "ICML 2026").
-// Add an entry only when a new venue actually appears; no need to pre-list others.
-const VENUE_SHORT: Record<string, string> = {
-  'Forty-second International Conference on Machine Learning': 'ICML',
-  'Forty-third International Conference on Machine Learning': 'ICML',
-  'Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)': 'ACL',
-  'The 24th China National Conference on Computational Linguistics (Evaluation Workshop)': 'CCL',
-};
+// Map venues to short display names by matching the STABLE core phrase of each venue,
+// ignoring the parts that change per edition (e.g. "Forty-third", "63rd", volume or
+// workshop suffixes). One rule per venue therefore covers all editions. This affects
+// display only; the stored BibTeX stays full and unchanged. The year is appended by
+// the UI, so values are the bare acronym (e.g. "ICML" -> shown as "ICML 2026").
+// Add a rule only when a genuinely new venue appears.
+const VENUE_PATTERNS: Array<[core: string, short: string]> = [
+  ['International Conference on Machine Learning', 'ICML'],
+  ['Annual Meeting of the Association for Computational Linguistics', 'ACL'],
+  ['China National Conference on Computational Linguistics', 'CCL'],
+];
 
 function shortenVenue(full: string): string {
-  return VENUE_SHORT[full.trim()] || full;
+  const haystack = full.trim().toLowerCase();
+  for (const [core, short] of VENUE_PATTERNS) {
+    if (haystack.includes(core.toLowerCase())) return short;
+  }
+  return full.trim();
 }
 
 export function parseBibTeX(bibtexContent: string, locale?: string): Publication[] {
