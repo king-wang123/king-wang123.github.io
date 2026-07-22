@@ -88,6 +88,23 @@
             font-weight: bold;
             font-style: normal;
         }
+        @page {
+            size: Letter;
+            margin: 0;
+        }
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            .item {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .stars {
+                display: none;
+            }
+        }
     </style>
     <script>
         // 函数：获取 GitHub 仓库的 Star 数量
@@ -139,14 +156,14 @@
     <div class="section">
         <h2>Research Experience</h2>
         <div class="item">
-            <h3>ICML 2026 : Sufficiency-guided Continuous Adaptive Reasoning</h3>
+            <h3>ICML 2026 : <a href="https://arxiv.org/abs/2606.17687" target="_blank">Sufficiency-guided Continuous Adaptive Reasoning</a></h3>
             <span class="authors"><strong>Jiahao Wang</strong>, Bingyu Liang, Chenhao Hu, Longhui Zhang, Xuebo Liu, Min Zhang, Jing Li, Xuelong Li</span>
             <ul>
                 <li>Exploring dynamic thinking mechanisms in LLMs to enable the model to autonomously adjust reasoning effort based on problem complexity. (1st Author)</li>
             </ul>
         </div>
         <div class="item">
-            <h3>ICML 2026 : Bridging Functional Correctness and Runtime Efficiency Gaps in LLM-Based Code Translation</h3>
+            <h3>ICML 2026 : <a href="https://arxiv.org/abs/2606.17683" target="_blank">Bridging Functional Correctness and Runtime Efficiency Gaps in LLM-Based Code Translation</a></h3>
             <span class="authors">Longhui Zhang, <strong>Jiahao Wang</strong>, Chenhao Hu, Bingyu Liang, Jing Li, Min Zhang</span>
             <ul>
                 <li>Improving Code Translation Correctness and Efficiency with Multi-Perspective Exploration and Difference-Aware Selection. (2nd Author)</li>
@@ -168,7 +185,7 @@
             </ul>
         </div>
         <div class="item">
-            <h3>CCL 2025 (Oral): <a href="https://arxiv.org/abs/2507.18580v1" target="_blank">SRAG-MAV for Fine-Grained Chinese Hate Speech Recognition</a></h3>
+            <h3>CCL 2025 (Oral): <a href="https://aclanthology.org/2025.ccl-2.47/" target="_blank">SRAG-MAV for Fine-Grained Chinese Hate Speech Recognition</a></h3>
             <span class="authors"><strong>Jiahao Wang</strong>, Ramen Liu, Longhui Zhang, Jing Li</span>
             <ul>
                 <li>System Report for CCL25-Eval Task 10: Proposed a novel SRAG-MAV framework that enhances fine-grained Chinese hate speech recognition. (1st Author)</li>

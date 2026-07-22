@@ -7,10 +7,10 @@
 
 ## Publications
 
-- **ICML 2026** (CCF A): Sufficiency-guided Continuous Adaptive Reasoning
+- **ICML 2026** (CCF A): [Sufficiency-guided Continuous Adaptive Reasoning](https://arxiv.org/abs/2606.17687)
   - **Jiahao Wang**, Bingyu Liang, Chenhao Hu, Longhui Zhang, Xuebo Liu, Min Zhang, Jing Li, Xuelong Li (1st Author)
 
-- **ICML 2026** (CCF A): Bridging Functional Correctness and Runtime Efficiency Gaps in LLM-Based Code Translation
+- **ICML 2026** (CCF A): [Bridging Functional Correctness and Runtime Efficiency Gaps in LLM-Based Code Translation](https://arxiv.org/abs/2606.17683)
   - Longhui Zhang, **Jiahao Wang**, Chenhao Hu, Bingyu Liang, Jing Li, Min Zhang (2nd Author)
 
 - **ACL 2025** (CCF A): Progressive Code Acceleration Through Bidirectional Tree Editing
@@ -21,9 +21,8 @@
   - Longhui Zhang, Bin Wang, **Jiahao Wang**, et al. (3rd Author)
   - [Paper Link](https://icml.cc/virtual/2025/poster/44745)
 
-- **CCL 2025 (Oral)**: SRAG-MAV for Fine-Grained Chinese Hate Speech Recognition
+- **CCL 2025 (Oral)**: [SRAG-MAV for Fine-Grained Chinese Hate Speech Recognition](https://aclanthology.org/2025.ccl-2.47/)
   - **Jiahao Wang**, Ramen Liu, Longhui Zhang, Jing Li (1st Author)
-  - [arXiv](https://arxiv.org/abs/2507.18580v1)
 
 ## Internships
 
@@ -48,13 +47,3 @@
 - Third Prize, 18th National College Student Information Security Competition (National Level), 2025
 - First Prize, 15th National College Student Mathematics Competition (Provincial Level), 2023
 - Third-Class Scholarship, Harbin Institute of Technology, Shenzhen, 2022-2023
-
-## Activities and Experiences
-
-**X-Institute International Summer School, Shenzhen**, Jul 2023
-- Topic: Terrain Exploration Scheme Based on Reinforcement Learning
-- Outcome: Received the "X-Institute Rising Star Award" (Top in Category)
-
-**Oxford University Regent's Park College Summer Programme**, Jul 2024
-- Topic: String Autocompletion Using Trie Data Structures
-- Outcome: First Place in Group Project Presentation

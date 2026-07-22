@@ -7,10 +7,10 @@
 
 ## 发表论文
 
-- **ICML 2026**（CCF A 类）：Sufficiency-guided Continuous Adaptive Reasoning
+- **ICML 2026**（CCF A 类）：[Sufficiency-guided Continuous Adaptive Reasoning](https://arxiv.org/abs/2606.17687)
   - **Jiahao Wang**、Bingyu Liang、Chenhao Hu、Longhui Zhang、Xuebo Liu、Min Zhang、Jing Li、Xuelong Li（一作）
 
-- **ICML 2026**（CCF A 类）：Bridging Functional Correctness and Runtime Efficiency Gaps in LLM-Based Code Translation
+- **ICML 2026**（CCF A 类）：[Bridging Functional Correctness and Runtime Efficiency Gaps in LLM-Based Code Translation](https://arxiv.org/abs/2606.17683)
   - Longhui Zhang、**Jiahao Wang**、Chenhao Hu、Bingyu Liang、Jing Li、Min Zhang（二作）
 
 - **ACL 2025**（CCF A 类）：Progressive Code Acceleration Through Bidirectional Tree Editing
@@ -21,9 +21,8 @@
   - Longhui Zhang、Bin Wang、**Jiahao Wang** 等（三作）
   - [论文链接](https://icml.cc/virtual/2025/poster/44745)
 
-- **CCL 2025 (Oral)**：SRAG-MAV for Fine-Grained Chinese Hate Speech Recognition
+- **CCL 2025 (Oral)**：[SRAG-MAV for Fine-Grained Chinese Hate Speech Recognition](https://aclanthology.org/2025.ccl-2.47/)
   - **Jiahao Wang**、Ramen Liu、Longhui Zhang、Jing Li（一作）
-  - [arXiv](https://arxiv.org/abs/2507.18580v1)
 
 ## 实习经历
 
@@ -48,13 +47,3 @@
 - 第十八届全国大学生信息安全竞赛三等奖（国家级），2025年
 - 第十五届全国大学生数学竞赛一等奖（省级），2023年
 - 哈尔滨工业大学（深圳）三等奖学金，2022-2023年
-
-## 活动经历
-
-**深圳零一学院国际暑期学校**，2023年7月
-- 主题：基于强化学习的地形探索方案
-- 成果：获得"零一学院明日之星奖"（类别最高奖）
-
-**牛津大学摄政学院暑期项目**，2024年7月
-- 主题：使用 Trie 数据结构的字符串自动补全
-- 成果：小组项目展示第一名

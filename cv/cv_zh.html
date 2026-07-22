@@ -7,7 +7,7 @@
     <title>resume-Jiahao Wang</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -119,6 +119,35 @@
             margin-left: 10px;
             display: inline;
         }
+
+        @page {
+            size: Letter;
+            margin: 0;
+        }
+
+        @media print {
+            html,
+            body {
+                background: #fff;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                box-shadow: none;
+            }
+
+            .item {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .stars {
+                display: none;
+            }
+        }
     </style>
     <script>
         // 函数：获取 GitHub 仓库的 Star 数量
@@ -190,7 +219,7 @@
         <div class="section">
             <h2>研究经历</h2>
             <div class="item">
-                <h3>Sufficiency-guided Continuous Adaptive Reasoning</h3>
+                <h3><a href="https://arxiv.org/abs/2606.17687" target="_blank">Sufficiency-guided Continuous Adaptive Reasoning</a></h3>
                 <ul>
                     <li><strong>会议：ICML 2026</strong>（<span class="highlight">CCFA类会议</span>，一作）</li>
                     <li><strong>研究方向：</strong>推理优化</li>
@@ -198,8 +227,8 @@
                 </ul>
             </div>
             <div class="item">
-                <h3>Bridging Functional Correctness and Runtime Efficiency Gaps in Code
-                    Translation</h3>
+                <h3><a href="https://arxiv.org/abs/2606.17683" target="_blank">Bridging Functional Correctness and Runtime Efficiency Gaps in Code
+                    Translation</a></h3>
                 <ul>
                     <li><strong>会议：ICML 2026</strong>（<span class="highlight">CCFA类会议</span>，二作）</li>
                     <li><strong>研究方向：</strong>代码翻译</li>
@@ -225,7 +254,7 @@
                 </ul>
             </div>
             <div class="item">
-                <h3><a href="https://arxiv.org/abs/2507.18580v1" target="_blank">SRAG-MAV for
+                <h3><a href="https://aclanthology.org/2025.ccl-2.47/" target="_blank">SRAG-MAV for
                         Fine-Grained Chinese Hate Speech Recognition</a></h3>
                 <ul>
                     <li><strong>会议：CCL 2025</strong> （<span class="highlight"></span>Oral，一作</span>）</li>

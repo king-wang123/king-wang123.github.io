@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --webpack",
+    "cv:pdf": "node scripts/generate-cv-pdfs.mjs",
     "start": "next start",
     "lint": "next lint"
   },
