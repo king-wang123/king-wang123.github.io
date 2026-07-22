@@ -47,6 +47,10 @@ export interface LocaleMessages {
     paper: string;
     code: string;
   };
+  cv: {
+    openHtml: string;
+    downloadPdf: string;
+  };
   footer: {
     lastUpdated: string;
     builtWithPrism: string;
@@ -102,6 +106,10 @@ const en: LocaleMessages = {
     paper: 'Paper',
     code: 'Code',
   },
+  cv: {
+    openHtml: 'Open standalone',
+    downloadPdf: 'Download PDF',
+  },
   footer: {
     lastUpdated: 'Last updated',
     builtWithPrism: 'Built with PRISM',
@@ -156,6 +164,10 @@ const zh: LocaleMessages = {
     bibtex: 'BibTeX',
     paper: '论文',
     code: '代码',
+  },
+  cv: {
+    openHtml: '独立打开',
+    downloadPdf: '下载 PDF',
   },
   footer: {
     lastUpdated: '最近更新',

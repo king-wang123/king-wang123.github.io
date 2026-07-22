@@ -20,6 +20,11 @@
 # production
 /build
 
+# Generated CV assets (cv/*.html and cv/image.png are the only sources)
+/cv/*.pdf
+/cv/noto-sans-sc-*.woff2
+/public/cv/
+
 # misc
 .DS_Store
 *.pem

@@ -1,3 +1,4 @@
-type = "text"
+type = "cv"
 title = "CV"
-source = "cv.md"
+source = "/cv/cv_en.html"
+download = "/cv/cv_en.pdf"

@@ -222,7 +222,16 @@ export default function PublicationsList({ config, publications, embedded = fals
                                 )}
                                 <div className="flex-grow">
                                     <h3 className={`${embedded ? "text-lg" : "text-xl"} font-semibold text-primary mb-2 leading-tight`}>
-                                        {pub.title}
+                                        {pub.url ? (
+                                            <a
+                                                href={pub.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="transition-colors hover:text-accent"
+                                            >
+                                                {pub.title}
+                                            </a>
+                                        ) : pub.title}
                                     </h3>
                                     <p className={`${embedded ? "text-sm" : "text-base"} text-neutral-600 dark:text-neutral-400 mb-2`}>
                                         {pub.authors.map((author, idx) => (

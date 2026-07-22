@@ -3,18 +3,21 @@
 import PublicationsList from '@/components/publications/PublicationsList';
 import TextPage from '@/components/pages/TextPage';
 import CardPage from '@/components/pages/CardPage';
+import CvPage from '@/components/pages/CvPage';
 import { Publication } from '@/types/publication';
 import {
   PublicationPageConfig,
   TextPageConfig,
   CardPageConfig,
+  CvPageConfig,
 } from '@/types/page';
 import { useLocaleStore } from '@/lib/stores/localeStore';
 
 export type DynamicPageLocaleData =
   | { type: 'publication'; config: PublicationPageConfig; publications: Publication[] }
   | { type: 'text'; config: TextPageConfig; content: string }
-  | { type: 'card'; config: CardPageConfig };
+  | { type: 'card'; config: CardPageConfig }
+  | { type: 'cv'; config: CvPageConfig };
 
 interface DynamicPageClientProps {
   dataByLocale: Record<string, DynamicPageLocaleData>;
@@ -31,7 +34,7 @@ export default function DynamicPageClient({ dataByLocale, defaultLocale }: Dynam
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className={`${pageData.type === 'cv' ? 'max-w-5xl' : 'max-w-4xl'} mx-auto px-4 sm:px-6 lg:px-8 py-12`}>
       {pageData.type === 'publication' && (
         <PublicationsList config={pageData.config} publications={pageData.publications} />
       )}
@@ -40,6 +43,9 @@ export default function DynamicPageClient({ dataByLocale, defaultLocale }: Dynam
       )}
       {pageData.type === 'card' && (
         <CardPage config={pageData.config} />
+      )}
+      {pageData.type === 'cv' && (
+        <CvPage config={pageData.config} />
       )}
     </div>
   );
