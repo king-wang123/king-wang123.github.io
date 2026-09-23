@@ -4,9 +4,9 @@ title = "About"
 [profile]
 research_interests = [
   "Large Language Models (LLMs)",
-  "Reinforcement Learning with Verifiable Rewards (RLVR)",
-  "Code Intelligence",
-  "Reasoning Optimization"
+  "Agentic RL",
+  "Long Horizon Reasoning",
+  "Post-training"
 ]
 
 [[sections]]

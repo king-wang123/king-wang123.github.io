@@ -1,13 +1,17 @@
 [site]
 title = "Jiahao Wang"
-description = "Undergraduate student at Harbin Institute of Technology, Shenzhen."
+description = "Ph.D. student at The Hong Kong Polytechnic University."
 favicon = "/favicon.svg"
-last_updated = "July 22, 2026"
+last_updated = "September 23, 2026"
 
 [author]
 name = "Jiahao Wang"
-title = "Undergraduate Student"
-institution = "Harbin Institute of Technology, Shenzhen"
+title = "Ph.D. Student"
+institution = "The Hong Kong Polytechnic University"
+affiliations = [
+  "Ph.D. Student, The Hong Kong Polytechnic University, 2026 –",
+  "B.Eng., Harbin Institute of Technology, Shenzhen, 2022 – 2026",
+]
 avatar = "/bio.jpg"
 
 [social]

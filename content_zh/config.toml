@@ -1,12 +1,16 @@
 [site]
 title = "王家豪"
-description = "哈尔滨工业大学（深圳）本科生个人主页。"
-last_updated = "2026年7月22日"
+description = "香港理工大学博士研究生个人主页。"
+last_updated = "2026年9月23日"
 
 [author]
 name = "王家豪"
-title = "本科生"
-institution = "哈尔滨工业大学（深圳）"
+title = "博士研究生"
+institution = "香港理工大学"
+affiliations = [
+  "博士研究生，香港理工大学，2026 –",
+  "本科，哈尔滨工业大学（深圳），2022 – 2026",
+]
 
 [social]
 email = "wjh123king@gmail.com"

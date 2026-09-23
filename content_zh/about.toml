@@ -4,9 +4,9 @@ title = "关于我"
 [profile]
 research_interests = [
   "大语言模型 (LLMs)",
-  "可验证奖励的强化学习 (RLVR)",
-  "代码智能",
-  "推理优化"
+  "Agentic RL",
+  "长程推理",
+  "后训练"
 ]
 
 [[sections]]

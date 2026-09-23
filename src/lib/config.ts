@@ -14,6 +14,9 @@ export interface SiteConfig {
     name: string;
     title: string;
     institution: string;
+    // Optional multi-line affiliations shown in the profile sidebar (e.g. each
+    // degree on its own line). Falls back to title + institution when absent.
+    affiliations?: string[];
     avatar: string;
   };
   social: {

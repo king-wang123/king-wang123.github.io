@@ -227,17 +227,34 @@ export default function Profile({ author, social, features, researchInterests }:
                 />
             </div>
 
-            {/* Name and Title */}
+            {/* Name and affiliations */}
             <div className="text-center mb-6">
                 <h1 className="text-3xl font-serif font-bold text-primary mb-2">
                     {author.name}
                 </h1>
-                <p className="text-lg text-accent font-medium mb-1">
-                    {author.title}
-                </p>
-                <p className="text-neutral-600 mb-2">
-                    {author.institution}
-                </p>
+                {author.affiliations && author.affiliations.length > 0 ? (
+                    <div className="space-y-1">
+                        {author.affiliations.map((line, index) => (
+                            <p
+                                key={line}
+                                className={index === 0
+                                    ? 'text-lg text-accent font-medium'
+                                    : 'text-sm text-neutral-600 dark:text-neutral-500'}
+                            >
+                                {line}
+                            </p>
+                        ))}
+                    </div>
+                ) : (
+                    <>
+                        <p className="text-lg text-accent font-medium mb-1">
+                            {author.title}
+                        </p>
+                        <p className="text-neutral-600 mb-2">
+                            {author.institution}
+                        </p>
+                    </>
+                )}
             </div>
 
             {/* Contact Links */}

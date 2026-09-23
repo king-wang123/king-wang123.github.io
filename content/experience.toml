@@ -5,9 +5,10 @@ description = "My internship experiences."
 [[items]]
 title = "Tencent Youtu Lab"
 subtitle = "Research Intern"
-date = "Mar 2026 – Present"
+date = "Mar 2026 – Sep 2026"
 content = """
 - **Agent Skill**: Improving on-device model performance with Agent Skill.
-- **Terminal Agent**: Data synthesis and model training for Terminal Agent.
+- **Terminal Agent**: Data synthesis and model training for Terminal Agent (ICLR 2027 Submission).
+- **Agent Evaluation**: Building real-world long-horizon interaction benchmarks from authentic user interaction scenarios.
 """
-tags = ["LLM Agent", "On-device Models", "Agent Skill", "Terminal Agent", "Data Synthesis"]
+tags = ["LLM Agent", "On-device Models", "Agent Skill", "Terminal Agent", "Agent Evaluation", "Data Synthesis"]
